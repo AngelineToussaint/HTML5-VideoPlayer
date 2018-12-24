@@ -3,14 +3,25 @@
 <head>
     <title>Lecteur vidéo HTML</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body>
-    <video width="75%">
+    <a class="waves-effect waves-light btn btn-play" onclick="play()">
+        <i class="material-icons left">play_arrow</i>Play
+    </a>
+    <p class="range-field">
+        <input type="range" class="btn-sound" onchange="sound()" min="0" max="100" />
+    </p>
+    <video id="video" width="75%">
         <source src="video/tomb-raider.mp4">
         <source src="video/tomb-raider.ogg">
     </video>
+
+    <script type="application/javascript" src="js/app.js"></script>
 </body>
 </html>
