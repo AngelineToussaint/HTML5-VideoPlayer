@@ -8,6 +8,10 @@ setInterval(function () {
     $(".btn-progression").val(video.currentTime)
 }, 500)
 
+function setCurrentTime(currentTime) {
+    video.currentTime = currentTime;
+}
+
 function play() {
     if (video.paused) {
         video.play();
