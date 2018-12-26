@@ -1,11 +1,11 @@
 var video = document.getElementById("video");
 
 setTimeout(function () {
-    $(".btn-progression").attr("max", video.duration)
+    $(".btn-progression input").attr("max", video.duration)
 }, 500)
 
 setInterval(function () {
-    $(".btn-progression").val(video.currentTime)
+    $(".btn-progression input").val(video.currentTime)
 }, 500)
 
 function setCurrentTime(currentTime) {
@@ -29,6 +29,8 @@ function play() {
 
 function sound(volume) {
     video.volume = volume / 100;
+
+    $('.btn-sound input').val(volume)
 }
 
 function fullscreen() {

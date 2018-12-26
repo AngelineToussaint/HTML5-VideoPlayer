@@ -11,24 +11,30 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 <body>
-    <a class="waves-effect waves-light btn btn-play" onclick="play()">
+    <a class="btn btn-play btn-player" onclick="play()">
         <i class="material-icons left">play_arrow</i>Play
     </a>
-    <p class="range-field">
-        <input type="range" class="btn-sound" onchange="sound(this.value)" min="0" max="100" />
+
+    <i class="material-icons white-text btn-player btn-volume-down"
+       onclick="sound(parseInt($('.btn-sound input').val()) - 10)">volume_down</i>
+    <p class="range-field btn-player btn-sound">
+        <input type="range" onchange="sound(this.value)" min="0" max="100" />
     </p>
-    <a class="waves-effect waves-light btn btn-fullscreen" onclick="fullscreen()">
+    <i class="material-icons white-text btn-player btn-volume-up"
+       onclick="sound(parseInt($('.btn-sound input').val()) + 10)">volume_up</i>
+
+    <a class="btn btn-fullscreen btn-player" onclick="fullscreen()">
         <i class="material-icons left">fullscreen</i>Pleine écran
     </a>
 
-    <video id="video" width="75%">
+    <p class="range-field btn-player btn-progression">
+        <input type="range" onchange="setCurrentTime(this.value)" min="0" />
+    </p>
+
+    <video id="video">
         <source src="video/tomb-raider.mp4">
         <source src="video/tomb-raider.ogg">
     </video>
-
-    <p class="range-field">
-        <input type="range" class="btn-progression" onchange="setCurrentTime(this.value)" min="0" />
-    </p>
 
     <script type="application/javascript" src="js/app.js"></script>
 </body>

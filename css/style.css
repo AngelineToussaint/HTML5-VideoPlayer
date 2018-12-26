@@ -1,0 +1,46 @@
+body {
+    background: #000000;
+    margin: 0;
+    overflow: hidden;
+}
+
+#video {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-player {
+    position: absolute!important;
+    z-index: 1;
+}
+
+.btn-play {
+    top: 85%;
+    left: 5%;
+}
+
+.btn-sound {
+    top: 83%;
+    left: 16%;
+}
+
+.btn-volume-down, .btn-volume-up {
+    cursor: pointer;
+    top: 86%;
+}
+
+.btn-volume-down {left: 14%;}
+.btn-volume-up {left: 25%;}
+
+.btn-fullscreen {
+    top: 85%;
+    right: 5%;
+}
+
+.btn-progression {
+    top: 90%;
+    width: 90%;
+    left: 5%;
+}
